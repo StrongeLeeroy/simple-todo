@@ -1,0 +1,141 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Roboto+Slab:700,400);
+
+body {
+    font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+}
+
+@import "partials/grid";
+
+form {
+    width: 100%;
+    min-width: 400px;
+    display: table;
+}
+
+header {
+    margin: 10px 10%;
+    max-width: 960px;
+    h2 {
+        font-weight: 700;
+        color: #444;
+        font-size: 2.5em;
+        font-family: 'Roboto Slab';
+    }
+    input[type="text"] {
+        display: table-cell;
+        height: 40px;
+        font-size: 1.3em;
+        font-weight: 200;
+        width: 80%;
+        min-width: 320px;
+        border: 1px solid #AFAFAF;
+        outline: none;
+        padding-left: 10px;
+        z-index: 0;
+        &:focus {
+            border-color: #ADD6FF;
+        }
+    }
+    button {
+        display: table-cell;
+        font-weight: 700;
+        background-color: transparent;
+        outline: none;
+        border: 1px solid #AFAFAF;
+        border-left: none;
+        height: 40px;
+        width: 20%;
+        min-width: 40px;
+        position: relative;
+        top: -1px;
+        z-index: 1;
+        transition: 0.2s ease-in-out;
+        &:hover {
+            background-color: #ADD6FF;
+            color: #134C85;
+            border-color: #1869BA;
+        }
+    }
+}
+
+.main-container {
+    margin: 20px 10%;
+    max-width: 960px;
+}
+
+.task-container {
+    border: 1px solid #AFAFAF;
+    width: 100%;
+    min-width: 400px;
+    display: table;
+    height: 90px;
+    transition: 0.2s ease-in-out;
+    h4, p {
+        margin: 0;
+    }
+    h4 {
+        font-family: 'Roboto Slab';
+    }
+    &:hover {
+        border: 1px solid rgba(0, 162, 255, 1);
+        background-color: rgba(0, 162, 255, 0.03);
+        .task-control .button {
+            border-left: 1px solid rgba(0, 162, 255, 1);
+        }
+    }
+    .task-info {
+        padding: 10px;
+        float: left;
+        min-width: 200px;
+    }
+    .task-control {
+        float: right;
+        width: 180px;
+        height: 90px;
+        .button {
+            float: right;
+            width: 86px;
+            height: 90px;
+            border-left: 1px solid #afafaf;
+            cursor: pointer;
+            overflow: hidden;
+            transition: 0.2s;
+            
+            p {
+                line-height: 85px;
+                text-align: center;
+                transition: 0.2s;
+            }
+            
+            .hidden, .shown {
+                position: relative;
+                top: 0;
+                transition: 0.2s;
+            }
+            .hidden {
+                opacity: 0;
+                transition: top 0.3s ease-in-out 0s, opacity 0.3s linear 0s;
+            }
+            
+            &:hover {
+                p {
+                    color: white;
+                }
+                .shown {
+                    top: -10px;
+                }
+                .hidden {
+                    top: -70px;
+                    opacity: 1;
+                    transition: top 0.2s ease-in-out 0.1s, opacity 0.1s linear 0.2s;
+                }
+                &.complete {
+                    background-color: blueviolet;
+                }
+                &.delete {
+                    background-color: brown;
+                }
+            }
+        }
+    }
+}

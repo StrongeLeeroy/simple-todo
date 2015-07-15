@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AngularJS - TODO App</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body ng-controller="TodoController">
+    <header class="grid-container">
+        <h2>NYI Title</h2>
+        <form ng-submit="addNewTask(newTask)">
+           <div class="row">
+               <input class="col-9" type="text" placeholder="New task name." ng-model="newTask.name">
+               <input class="col-3" type="date" ng-model="newTask.due">
+           </div>
+            <hr class="small">
+           <div class="row">
+               <textarea class="col-12" resize="none" cols="30" rows="2" placeholder="Task description." ng-model="newTask.description"></textarea>
+           </div>
+           <hr class="small">
+           <div class="row">
+                <button class="col-12" type="submit">ADD</button>
+           </div>
+        </form>
+    </header>
+    <hr class="small">
+    <div class="grid-container">
+        <!-- Task List -->
+        <task-item class="repeated-item" ng-repeat="task in tasks"></task-item>
+    </div>
+   
+   
+   
+    <!-- JavaScript -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Controllers -->
+    <script src="js/controllers/TodoController.js"></script>
+    <!-- Directives -->
+    <script src="js/directives/taskItem.js"></script>
+    <!-- Services -->
+</body>
+</html>

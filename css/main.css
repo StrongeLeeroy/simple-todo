@@ -1,0 +1,42 @@
+/* line 1, C:/Users/gorkah/angularjs-todo/css/main.scss */
+.task-container {
+  margin-top: 20px;
+  border: 1px solid #AFAFAF;
+  padding: 10px; }
+  /* line 6, C:/Users/gorkah/angularjs-todo/css/main.scss */
+  .task-container .checkbox-container {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: top; }
+    /* line 12, C:/Users/gorkah/angularjs-todo/css/main.scss */
+    .task-container .checkbox-container input[type="checkbox"] {
+      display: none; }
+    /* line 15, C:/Users/gorkah/angularjs-todo/css/main.scss */
+    .task-container .checkbox-container input[type="checkbox"] + label span {
+      display: inline-block;
+      width: 25px;
+      height: 25px;
+      margin-top: -20px;
+      margin-left: -11px;
+      vertical-align: middle;
+      cursor: pointer;
+      border: 1px solid #afafaf;
+      transition: 0.2s ease-in; }
+      /* line 25, C:/Users/gorkah/angularjs-todo/css/main.scss */
+      .task-container .checkbox-container input[type="checkbox"] + label span i {
+        opacity: 0;
+        transition: 0.2s ease-in;
+        font-size: 1.6em;
+        color: darkslateblue; }
+    /* line 32, C:/Users/gorkah/angularjs-todo/css/main.scss */
+    .task-container .checkbox-container input[type="checkbox"]:checked + label span {
+      background-color: beige; }
+      /* line 34, C:/Users/gorkah/angularjs-todo/css/main.scss */
+      .task-container .checkbox-container input[type="checkbox"]:checked + label span i {
+        opacity: 1; }
+  /* line 40, C:/Users/gorkah/angularjs-todo/css/main.scss */
+  .task-container .text-container {
+    display: inline-block; }
+
+/*# sourceMappingURL=main.css.map */

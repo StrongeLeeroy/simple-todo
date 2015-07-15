@@ -1,0 +1,213 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Roboto+Slab:700,400);
+/* line 3, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+body {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; }
+
+/* line 3, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+*,
+*:after,
+*:before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 11, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.grid-container {
+  width: 100%;
+  max-width: 1200px; }
+
+/* line 16, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+[class^='col-'] {
+  float: left;
+  width: 8.33%;
+  min-height: 1px;
+  padding: 10px; }
+
+/* line 23, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-1 {
+  width: 100%; }
+
+/* line 24, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-2 {
+  width: 50%; }
+
+/* line 25, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-3 {
+  width: 33.33%; }
+
+/* line 26, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-4 {
+  width: 25%; }
+
+/* line 27, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-5 {
+  width: 20%; }
+
+/* line 28, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-6 {
+  width: 16.6666666667%; }
+
+/* line 29, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-7 {
+  width: 14.2857142857%; }
+
+/* line 30, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-8 {
+  width: 12.5%; }
+
+/* line 31, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-9 {
+  width: 11.1111111111%; }
+
+/* line 32, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-10 {
+  width: 10%; }
+
+/* line 33, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-11 {
+  width: 9.09090909091%; }
+
+/* line 34, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.col-12 {
+  width: 8.33%; }
+
+/* line 39, C:/Users/gorkah/angularjs-todo/stage1/css/partials/_grid.scss */
+.row,
+.row:after,
+.row:before {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* line 9, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+form {
+  width: 100%;
+  min-width: 400px;
+  display: table; }
+
+/* line 15, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+header {
+  margin: 10px 10%;
+  max-width: 960px; }
+  /* line 18, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+  header h2 {
+    font-weight: 700;
+    color: #444;
+    font-size: 2.5em;
+    font-family: 'Roboto Slab'; }
+  /* line 24, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+  header input[type="text"] {
+    display: table-cell;
+    height: 40px;
+    font-size: 1.3em;
+    font-weight: 200;
+    width: 80%;
+    min-width: 320px;
+    border: 1px solid #AFAFAF;
+    outline: none;
+    padding-left: 10px;
+    z-index: 0; }
+    /* line 35, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+    header input[type="text"]:focus {
+      border-color: #ADD6FF; }
+  /* line 39, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+  header button {
+    display: table-cell;
+    font-weight: 700;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #AFAFAF;
+    border-left: none;
+    height: 40px;
+    width: 20%;
+    min-width: 40px;
+    position: relative;
+    top: -1px;
+    z-index: 1;
+    transition: 0.2s ease-in-out; }
+    /* line 53, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+    header button:hover {
+      background-color: #ADD6FF;
+      color: #134C85;
+      border-color: #1869BA; }
+
+/* line 61, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+.main-container {
+  margin: 20px 10%;
+  max-width: 960px; }
+
+/* line 66, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+.task-container {
+  border: 1px solid #AFAFAF;
+  width: 100%;
+  min-width: 400px;
+  display: table;
+  height: 90px;
+  transition: 0.2s ease-in-out; }
+  /* line 73, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+  .task-container h4, .task-container p {
+    margin: 0; }
+  /* line 76, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+  .task-container h4 {
+    font-family: 'Roboto Slab'; }
+  /* line 79, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+  .task-container:hover {
+    border: 1px solid #00a2ff;
+    background-color: rgba(0, 162, 255, 0.03); }
+    /* line 82, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+    .task-container:hover .task-control .button {
+      border-left: 1px solid #00a2ff; }
+  /* line 86, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+  .task-container .task-info {
+    padding: 10px;
+    float: left;
+    min-width: 200px; }
+  /* line 91, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+  .task-container .task-control {
+    float: right;
+    width: 180px;
+    height: 90px; }
+    /* line 95, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+    .task-container .task-control .button {
+      float: right;
+      width: 86px;
+      height: 90px;
+      border-left: 1px solid #afafaf;
+      cursor: pointer;
+      overflow: hidden;
+      transition: 0.2s; }
+      /* line 104, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+      .task-container .task-control .button p {
+        line-height: 85px;
+        text-align: center;
+        transition: 0.2s; }
+      /* line 110, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+      .task-container .task-control .button .hidden, .task-container .task-control .button .shown {
+        position: relative;
+        top: 0;
+        transition: 0.2s; }
+      /* line 115, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+      .task-container .task-control .button .hidden {
+        opacity: 0;
+        transition: top 0.3s ease-in-out 0s, opacity 0.3s linear 0s; }
+      /* line 121, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+      .task-container .task-control .button:hover p {
+        color: white; }
+      /* line 124, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+      .task-container .task-control .button:hover .shown {
+        top: -10px; }
+      /* line 127, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+      .task-container .task-control .button:hover .hidden {
+        top: -70px;
+        opacity: 1;
+        transition: top 0.2s ease-in-out 0.1s, opacity 0.1s linear 0.2s; }
+      /* line 132, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+      .task-container .task-control .button:hover.complete {
+        background-color: blueviolet; }
+      /* line 135, C:/Users/gorkah/angularjs-todo/stage1/css/main.scss */
+      .task-container .task-control .button:hover.delete {
+        background-color: brown; }
+
+/*# sourceMappingURL=main.css.map */

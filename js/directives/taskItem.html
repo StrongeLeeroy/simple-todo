@@ -1,0 +1,8 @@
+<div class="checkbox-container">
+    <input type="checkbox" name="c{{ index }}" id="c{{ index }}">
+    <label for="c{{ index }}"><span><i class="glyphicon glyphicon-remove"></i></span></label>
+</div>
+<div class="text-container">
+    <h4> {{ info.name }}</h4>
+    <small>{{ info.due | date }}</small>
+</div>
