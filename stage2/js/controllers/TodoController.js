@@ -1,30 +1,43 @@
-app.controller('TodoController', ['$scope', function($scope) {
+app.controller('TodoController', ['$scope', '$log', 'storageService', function($scope, $log, storage) {
     
-    // JSON Array - Task info storage. //
-	/*$scope.tasks = [
-		{ name: 'Sample task 1', due: new Date(), description: 'Task description number one!', status: 1 },
-		{ name: 'Sample task 2', due: new Date(), description: 'Task description number two!', status: 0},
-		{ name: 'Sample longer task 3', due: new Date(), description: 'Task description number three!', status: 1}
-	];*/
-    $scope.tasks = localStorage.getItem('angularJSTodoTasks') ? JSON.parse(localStorage['angularJSTodoTasks']) : [];
-    console.log()
+    // Task-list format examples
+	/*
+       $scope.tasks = [
+		  { name: 'Sample task 1', due: new Date(), description: 'Task description number one!', status: 1 },
+		  { name: 'Sample task 2', due: new Date(), description: 'Task description number two!', status: 0},
+		  { name: 'Sample longer task 3', due: new Date(), description: 'Task description number three!', status: 1}
+	   ];
+    */
     
-    // Task methods: Complete / Add / Delete //
+    // Get tasklist from local storage:
+    $scope.tasks = storage('get', 'angularTodoApp');
+    
+    // Task methods
+    // Marks a task as complete.
     $scope.markComplete = function(index) {
+        $log.info('Setting task status (for index + ' + index + ') to complete.');
         $scope.tasks[index].status = 1;
+        storage('put', 'angularTodoApp', $scope.tasks);
     };
+    
+    // Marks a task a due / incomplete.
     $scope.markDue = function(index) {
+        $log.info('Setting task status (for index + ' + index + ') to incomplete.');
         $scope.tasks[index].status = 0;
+        storage('put', 'angularTodoApp', $scope.tasks);
     };
+    
+    // Adds a new task to the array, by taking values from the input form.
     $scope.addNewTask = function(newTask) {
+        $log.info('Adding new task to task-list.');
         $scope.tasks.push({ name: newTask.name, due: newTask.due, description: newTask.description, status: 0 });
-        updateStorage();
+        storage('put', 'angularTodoApp', $scope.tasks);
     };
+    
+    // Removes a task from the array.
     $scope.removeTask = function(index) {
+        $log.warn('Removing task from task list at index ' + index);
         $scope.tasks.splice(index, 1);
-        updateStorage();
+        storage('put', 'angularTodoApp', $scope.tasks);
     };
-    function updateStorage() {
-        localStorage['angularJSTodoTasks'] = JSON.stringify($scope.tasks);
-    }
 }]);
