@@ -10,7 +10,7 @@ app.controller('TodoController', ['$scope', '$log', 'storageService', function($
     */
     
     // Get tasklist from local storage:
-    $scope.tasks = storage('get', 'angularTodoApp');
+    $scope.tasks = storage('GET', 'angularTodoApp');
     
     /*  Reorders the array by date NYI. Will probably run it after every update to localStorage.
             $scope.tasks.sort(function(a, b){
@@ -23,20 +23,20 @@ app.controller('TodoController', ['$scope', '$log', 'storageService', function($
     $scope.changeStatus = function(index) {
         $log.info('Changing task status for index ' + index + ').');
         $scope.tasks[index].status ? $scope.tasks[index].status = 0 : $scope.tasks[index].status = 1;
-        storage('put', 'angularTodoApp', $scope.tasks);
+        storage('PUT', 'angularTodoApp', $scope.tasks);
     };
     
     // Adds a new task to the array, by taking values from the input form.
     $scope.addNewTask = function(newTask) {
         $log.info('Adding new task to task-list.');
         $scope.tasks.push({ name: newTask.name, due: newTask.due, description: newTask.description, status: 0 });
-        storage('put', 'angularTodoApp', $scope.tasks);
+        storage('PUT', 'angularTodoApp', $scope.tasks);
     };
     
     // Removes a task from the array.
     $scope.removeTask = function(index) {
-        $log.warn('Removing task from task list at index ' + index);
+        $log.info('Removing task from task list at index ' + index);
         $scope.tasks.splice(index, 1);
-        storage('put', 'angularTodoApp', $scope.tasks);
+        storage('PUT', 'angularTodoApp', $scope.tasks);
     };
 }]);
