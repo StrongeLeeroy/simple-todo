@@ -24,13 +24,13 @@ header {
             border-color: #ADD6FF;
         }
     }
-    input[type="text"] {
+    input[type="text"].task-name {
         height: 40px;
         font-size: 1.3em;
         font-weight: 200;
         padding-left: 10px;
     }
-    input[type="date"] {
+    input[type="text"].date-item {
         height: 40px;
         border-left: none; 
         outline: none;
@@ -102,6 +102,8 @@ header {
                 position: relative;
                 top: 0;
                 transition: 0.2s;
+                font-weight: 600;
+                font-size: 0.75em;
             }
             .hidden {
                 opacity: 0;
@@ -133,6 +135,11 @@ header {
 
 .task-complete {
     background-color: #EDF2D9;
+    h4 {
+        text-decoration: line-through;
+        color: #767676;
+        transition: 0.2s;
+    }
     &:hover {
         background-color: #E7F4DD;
         border-color: #60C247;

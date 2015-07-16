@@ -32,8 +32,12 @@ app.controller('TodoController', ['$scope', '$log', 'storageService', function($
     
     // Adds a new task to the array, by taking values from the input form.
     $scope.addNewTask = function(newTask) {
+        var dueDate = new Date(newTask.due);
         $log.info('Adding new task to task-list.');
-        $scope.tasks.push({ name: newTask.name, due: newTask.due, description: newTask.description, status: 0 });
+        if (isNaN(dueDate.getDay())) {
+            dueDate = 'Sometime. Somewhere.';
+        }
+        $scope.tasks.push({ name: newTask.name, due: dueDate, description: newTask.description, status: 0 });
         storage('PUT', 'angularTodoApp', $scope.tasks);
     };
     
@@ -42,5 +46,11 @@ app.controller('TodoController', ['$scope', '$log', 'storageService', function($
         $log.info('Removing task from task list at index ' + index);
         $scope.tasks.splice(index, 1);
         storage('PUT', 'angularTodoApp', $scope.tasks);
+    };
+    $scope.checkDate = function() {
+        if ($scope.newTask.due && ($scope.newTask.due.length == 4 || $scope.newTask.due.length == 7) && $scope.newTask.due[$scope.newTask.due.length - 1] !== '/') {
+            console.log();
+            $scope.newTask.due += '/';
+        }
     };
 }]);

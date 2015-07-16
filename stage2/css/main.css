@@ -29,56 +29,59 @@ body {
   width: 8.33%;
   min-height: 1px;
   padding: 10px; }
+  /* line 23, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+  [class*='col-'].no-padd {
+    padding: 0; }
 
-/* line 25, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 28, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-12 {
   width: 100%; }
 
-/* line 26, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 29, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-11 {
   width: 91.6666666666666667%; }
 
-/* line 27, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 30, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-10 {
   width: 83.3333333333333333%; }
 
-/* line 28, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 31, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-9 {
   width: 75%; }
 
-/* line 29, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 32, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-8 {
   width: 66.6666666666666667%; }
 
-/* line 30, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 33, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-7 {
   width: 58.3333333333333333%; }
 
-/* line 31, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 34, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-6 {
   width: 50%; }
 
-/* line 32, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 35, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-5 {
   width: 41.6666666666666667%; }
 
-/* line 33, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 36, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-4 {
   width: 33.3333333333333333%; }
 
-/* line 34, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 37, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-3 {
   width: 25%; }
 
-/* line 35, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 38, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-2 {
   width: 16.6666666666666667%; }
 
-/* line 36, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 39, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .col-1 {
   width: 8.33333333333333333%; }
 
-/* line 40, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 43, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 .row,
 .row:after,
 .row:before {
@@ -86,7 +89,7 @@ body {
   display: table;
   clear: both; }
 
-/* line 46, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
+/* line 49, C:/Users/gorkah/angularjs-todo/stage2/css/partials/_grid.scss */
 hr.small {
   margin-top: 10px;
   border: none; }
@@ -109,14 +112,14 @@ header input, header textarea {
     border-color: #ADD6FF; }
 
 /* line 27, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
-header input[type="text"] {
+header input[type="text"].task-name {
   height: 40px;
   font-size: 1.3em;
   font-weight: 200;
   padding-left: 10px; }
 
 /* line 33, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
-header input[type="date"] {
+header input[type="text"].date-item {
   height: 40px;
   border-left: none;
   outline: none;
@@ -187,56 +190,63 @@ header button {
         text-align: center;
         position: relative;
         top: 0;
-        transition: 0.2s; }
-      /* line 106, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+        transition: 0.2s;
+        font-weight: 600;
+        font-size: 0.75em; }
+      /* line 108, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
       .task-container .task-control .button .hidden {
         opacity: 0;
         transition: top 0.3s ease-in-out 0s, opacity 0.3s linear 0s; }
-      /* line 112, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+      /* line 114, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
       .task-container .task-control .button:hover p {
         color: white; }
-      /* line 115, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+      /* line 117, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
       .task-container .task-control .button:hover .shown {
         top: -10px; }
-      /* line 118, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+      /* line 120, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
       .task-container .task-control .button:hover .hidden {
         top: -55px;
         opacity: 1;
         transition: top 0.2s ease-in-out 0.1s, opacity 0.1s linear 0.2s; }
-      /* line 123, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+      /* line 125, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
       .task-container .task-control .button:hover.complete {
         background-color: blueviolet; }
-      /* line 126, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+      /* line 128, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
       .task-container .task-control .button:hover.delete {
         background-color: brown; }
 
-/* line 134, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+/* line 136, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
 .task-complete {
   background-color: #EDF2D9; }
-  /* line 136, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+  /* line 138, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+  .task-complete h4 {
+    text-decoration: line-through;
+    color: #767676;
+    transition: 0.2s; }
+  /* line 143, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
   .task-complete:hover {
     background-color: #E7F4DD;
     border-color: #60C247; }
-    /* line 139, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+    /* line 146, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
     .task-complete:hover .task-control .button {
       border-color: #60C247; }
 
-/* line 145, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+/* line 152, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
 .json-data-display {
   border: 1px solid #AFAFAF; }
 
-/* line 149, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+/* line 156, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
 .ghost-button {
   background-color: transparent;
   border: 1px solid #AFAFAF;
   outline: none;
   font-weight: 600;
   margin-bottom: 10px; }
-  /* line 155, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+  /* line 162, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
   .ghost-button:hover {
     border-color: #00a2ff; }
 
-/* line 160, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+/* line 167, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
 .repeated-item.ng-enter, .repeated-item.ng-leave {
   -webkit-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
   -moz-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
@@ -245,7 +255,7 @@ header button {
   transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
   position: relative; }
 
-/* line 170, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+/* line 177, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
 .repeated-item.ng-leave.ng-leave-active,
 .repeated-item.ng-enter {
   transform: rotateX(90deg);
@@ -253,7 +263,7 @@ header button {
   opacity: 0;
   max-height: 0; }
 
-/* line 178, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+/* line 185, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
 .repeated-item.ng-enter.ng-enter-active,
 .repeated-item.ng-leave {
   transform: rotateX(0deg);
