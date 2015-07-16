@@ -37,9 +37,16 @@
         <!-- Task List -->
         <task-item class="repeated-item" ng-repeat="task in tasks"></task-item>
     </div>
-    <div ng-view></div>
    
-   
+   <button class="col-12 ghost-button" ng-click="toggleJSON()">
+   Display JSON<br>
+   <i class="fa fa-code"></i> 
+   </button>
+   <div class="row" ng-show="jsonData">
+      <div class="col-12 json-data-display">
+        <pre>{{ tasks | json }}</pre>
+      </div>
+   </div>
    
     <!-- JavaScript -->
     <script src="js/angular.min.js"></script>

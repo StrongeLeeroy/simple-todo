@@ -222,6 +222,21 @@ header button {
       border-color: #60C247; }
 
 /* line 145, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+.json-data-display {
+  border: 1px solid #AFAFAF; }
+
+/* line 149, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+.ghost-button {
+  background-color: transparent;
+  border: 1px solid #AFAFAF;
+  outline: none;
+  font-weight: 600;
+  margin-bottom: 10px; }
+  /* line 155, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+  .ghost-button:hover {
+    border-color: #00a2ff; }
+
+/* line 160, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
 .repeated-item.ng-enter, .repeated-item.ng-leave {
   -webkit-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
   -moz-transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
@@ -230,7 +245,7 @@ header button {
   transition: 400ms cubic-bezier(0.25, 0.25, 0.75, 0.75) all;
   position: relative; }
 
-/* line 155, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+/* line 170, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
 .repeated-item.ng-leave.ng-leave-active,
 .repeated-item.ng-enter {
   transform: rotateX(90deg);
@@ -238,7 +253,7 @@ header button {
   opacity: 0;
   max-height: 0; }
 
-/* line 163, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
+/* line 178, C:/Users/gorkah/angularjs-todo/stage2/css/main.scss */
 .repeated-item.ng-enter.ng-enter-active,
 .repeated-item.ng-leave {
   transform: rotateX(0deg);

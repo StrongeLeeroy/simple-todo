@@ -11,6 +11,10 @@ app.controller('TodoController', ['$scope', '$log', 'storageService', function($
     
     // Get tasklist from local storage:
     $scope.tasks = storage('GET', 'angularTodoApp');
+    $scope.jsonData = 0;
+    $scope.toggleJSON = function() {
+        $scope.jsonData = $scope.jsonData === 0 ? 1 : 0;
+    }
     
     /*  Reorders the array by date NYI. Will probably run it after every update to localStorage.
             $scope.tasks.sort(function(a, b){
