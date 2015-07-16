@@ -12,18 +12,17 @@ app.controller('TodoController', ['$scope', '$log', 'storageService', function($
     // Get tasklist from local storage:
     $scope.tasks = storage('get', 'angularTodoApp');
     
+    /*  Reorders the array by date NYI. Will probably run it after every update to localStorage.
+            $scope.tasks.sort(function(a, b){
+                return new Date(a.due) - new Date(b.due);
+            });
+    */
+    
     // Task methods
     // Marks a task as complete.
-    $scope.markComplete = function(index) {
-        $log.info('Setting task status (for index + ' + index + ') to complete.');
-        $scope.tasks[index].status = 1;
-        storage('put', 'angularTodoApp', $scope.tasks);
-    };
-    
-    // Marks a task a due / incomplete.
-    $scope.markDue = function(index) {
-        $log.info('Setting task status (for index + ' + index + ') to incomplete.');
-        $scope.tasks[index].status = 0;
+    $scope.changeStatus = function(index) {
+        $log.info('Changing task status for index ' + index + ').');
+        $scope.tasks[index].status ? $scope.tasks[index].status = 0 : $scope.tasks[index].status = 1;
         storage('put', 'angularTodoApp', $scope.tasks);
     };
     

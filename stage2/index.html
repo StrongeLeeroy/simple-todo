@@ -2,6 +2,7 @@
 <html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
+    <base href="/">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AngularJS - TODO App</title>
@@ -36,12 +37,14 @@
         <!-- Task List -->
         <task-item class="repeated-item" ng-repeat="task in tasks"></task-item>
     </div>
+    <div ng-view></div>
    
    
    
     <!-- JavaScript -->
     <script src="js/angular.min.js"></script>
     <script src="js/angular-animate.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="js/app.js"></script>
     <!-- Controllers -->
