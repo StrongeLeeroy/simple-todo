@@ -9,6 +9,9 @@ app.controller('TodoController', ['$scope', '$log', 'storageService', function($
 	   ];
     */
     
+    $scope.appTitle = 'ng-tasklist';
+    $scope.appSubTitle = 'an AngularJS to-do app.';
+    
     // Get tasklist from local storage:
     $scope.tasks = storage('GET', 'angularTodoApp');
     $scope.jsonData = 0;

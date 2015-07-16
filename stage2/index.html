@@ -16,7 +16,9 @@
 </head>
 <body ng-controller="TodoController">
     <header class="grid-container">
-        <h2>NYI Title</h2>
+        <h2>{{ appTitle }}</h2>
+        <h4>{{ appSubTitle }}</h4>
+        <hr class="medium">
         <form ng-submit="addNewTask(newTask)">
            <div class="row">
                <input class="col-9 task-name" type="text" placeholder="New task name." ng-model="newTask.name" required="required">
